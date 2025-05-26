@@ -131,96 +131,101 @@
     <div id="counter"></div>
   </div>
 
-  <script>
-    let cards = [], idx = 0, flipped = false, swapTD = false;
+ <script>
+  let cards = [], idx = 0, flipped = false, swapTD = false;
 
-    function applyDarkMode(isDark) {
-      document.body.classList.toggle('dark', isDark);
-      localStorage.setItem('dark', isDark);
-      document.getElementById('toggle-dark').textContent = isDark ? '☀️' : '🌙';
-    }
-    document.getElementById('toggle-dark').addEventListener('click', () => {
-      applyDarkMode(!document.body.classList.contains('dark'));
+  function applyDarkMode(isDark) {
+    document.body.classList.toggle('dark', isDark);
+    localStorage.setItem('dark', isDark);
+    document.getElementById('toggle-dark').textContent = isDark ? '☀️' : '🌙';
+  }
+  document.getElementById('toggle-dark').addEventListener('click', () => {
+    applyDarkMode(!document.body.classList.contains('dark'));
+  });
+  applyDarkMode(localStorage.getItem('dark') === 'true');
+
+  document.getElementById('swap-td').addEventListener('click', () => {
+    swapTD = !swapTD;
+    showCard(false);
+  });
+
+  async function loadSets() {
+    // Hardcoded file list
+    return [
+      '01-02.txt',
+      '03.txt',
+      '04.txt',
+      '05.txt',
+      '06.txt',
+      '07.txt',
+      '08.txt',
+      '09.txt',
+      '10.txt'
+    ];
+  }
+
+  function renderSets(list) {
+    const container = document.getElementById('sets');
+    container.innerHTML = ''; // Clear existing
+    list.forEach(file => {
+      const btn = document.createElement('button');
+      btn.textContent = file.replace(/\.txt$/, '');
+      btn.addEventListener('click', () => loadFile(file));
+      container.appendChild(btn);
     });
-    applyDarkMode(localStorage.getItem('dark') === 'true');
+    if (list.length) loadFile(list[0]);
+  }
 
-    document.getElementById('swap-td').addEventListener('click', () => {
-      swapTD = !swapTD;
-      showCard(false);
-    });
+  async function loadFile(file) {
+    const res = await fetch(file);
+    const text = await res.text();
+    cards = text.trim().split(/\r?\n/).map(line => line.split('\t'));
+    idx = 0; flipped = false;
+    showCard(false);
+  }
 
-    async function loadSets() {
-      const resp = await fetch('./');
-      const html = await resp.text();
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const links = Array.from(doc.querySelectorAll('a'))
-        .map(a => a.getAttribute('href'))
-        .filter(href => href.endsWith('.txt'));
-      return [...new Set(links)];
+  function showCard(animate = true) {
+    const cardData = cards[idx] || ['',''];
+    const front = swapTD ? cardData[1] : cardData[0];
+    const back = swapTD ? cardData[0] : cardData[1];
+    const fc = document.getElementById('flashcard');
+    document.querySelector('#flashcard .front').textContent = front;
+    document.querySelector('#flashcard .back').textContent = back;
+    if (!animate) {
+      fc.style.transition = 'none';
+    } else {
+      fc.style.transition = '';
     }
-
-    function renderSets(list) {
-      const container = document.getElementById('sets');
-      list.forEach(file => {
-        const btn = document.createElement('button');
-        btn.textContent = file.replace(/\.txt$/, '');
-        btn.addEventListener('click', () => loadFile(file));
-        container.appendChild(btn);
-      });
-      if (list.length) loadFile(list[0]);
+    fc.classList.toggle('flipped', flipped);
+    void fc.offsetWidth;
+    if (!animate) {
+      fc.style.transition = 'transform 0.6s';
     }
+    document.getElementById('counter').textContent = `Card ${idx+1} of ${cards.length}`;
+  }
 
-    async function loadFile(file) {
-      const res = await fetch(file);
-      const text = await res.text();
-      cards = text.trim().split(/\r?\n/).map(line => line.split('\t'));
-      idx = 0; flipped = false;
-      showCard(false);
-    }
+  document.getElementById('flashcard').addEventListener('click', () => {
+    flipped = !flipped;
+    showCard();
+  });
 
-    function showCard(animate = true) {
-      const cardData = cards[idx] || ['',''];
-      const front = swapTD ? cardData[1] : cardData[0];
-      const back = swapTD ? cardData[0] : cardData[1];
-      const fc = document.getElementById('flashcard');
-      document.querySelector('#flashcard .front').textContent = front;
-      document.querySelector('#flashcard .back').textContent = back;
-      if (!animate) {
-        fc.style.transition = 'none';
-      } else {
-        fc.style.transition = '';
-      }
-      fc.classList.toggle('flipped', flipped);
-      void fc.offsetWidth;
-      if (!animate) {
-        fc.style.transition = 'transform 0.6s';
-      }
-      document.getElementById('counter').textContent = `Card ${idx+1} of ${cards.length}`;
-    }
-
-    document.getElementById('flashcard').addEventListener('click', () => {
+  document.addEventListener('keydown', e => {
+    if (e.code === 'Space') {
+      e.preventDefault();
       flipped = !flipped;
       showCard();
-    });
+    } else if (e.key === 'ArrowRight') {
+      idx = (idx + 1) % cards.length;
+      flipped = false;
+      showCard(false);
+    } else if (e.key === 'ArrowLeft') {
+      idx = (idx - 1 + cards.length) % cards.length;
+      flipped = false;
+      showCard(false);
+    }
+  });
 
-    document.addEventListener('keydown', e => {
-      if (e.code === 'Space') {
-        e.preventDefault();
-        flipped = !flipped;
-        showCard();
-      } else if (e.key === 'ArrowRight') {
-        idx = (idx + 1) % cards.length;
-        flipped = false;
-        showCard(false);
-      } else if (e.key === 'ArrowLeft') {
-        idx = (idx - 1 + cards.length) % cards.length;
-        flipped = false;
-        showCard(false);
-      }
-    });
-
-    loadSets().then(renderSets);
-  </script>
+  loadSets().then(renderSets);
+</script>
 </body>
 </html>

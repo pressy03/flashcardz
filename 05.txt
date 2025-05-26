@@ -1,0 +1,83 @@
+Partition (part)	A division of a storage device for organizing data separately.
+Block devices	Storage devices (e.g., HDDs, SSDs) that transfer data in fixed-size blocks.
+Character devices	Devices like keyboards and mice that transmit data one character at a time.
+FAT	File system compatible with most OSs; used in older or portable devices.
+ext2	Old Linux file system, no journaling.
+ext3	Ext2 with journaling; better data integrity.
+ext4	Improved ext3, supports large volumes and files.
+XFS	64-bit journaling file system, fast crash recovery.
+BTRFS	Advanced file system; supports snapshots, error detection, and scaling.
+SMB	Protocol for sharing files over a network, mainly Windows.
+CIFS	Common Internet File System — version of SMB.
+NFS	Network File System, Linux-native protocol for file sharing.
+Inode	A data structure storing metadata about files.
+VFS (Virtual File System)	Layer between kernel and real file system — translates system calls.
+Drive labels	Identifiers for partitions; max 16 characters.
+e2label / xfs_admin	Tools for viewing/modifying labels on ext/XFS file systems.
+Primary partition	Used for booting or swap; can contain OS.
+Extended partition	Contains multiple logical drives; not directly mountable.
+Logical partition	Created inside extended partition; used for organizing storage.
+fdisk	Creates and manages disk partitions.
+fdisk commands	p: print, n: new partition, d: delete, w: write changes.
+parted	Partition manager for modern disks; supports larger disks and GPT.
+partprobe	Updates the kernel after partition changes.
+mkfs	Creates a new file system on a partition.
+fstab	File that configures which partitions mount and how at boot.
+fstab columns	Device, mount point, file system type, mount options, dump, fsck order.
+/etc/crypttab	Config file for encrypted partitions to unlock at boot.
+/dev	Directory where device files (like /dev/sda1) are located.
+/dev/null	Discards all data written to it — "black hole" file.
+/dev/zero	Outputs infinite null bytes — used to wipe disks.
+/dev/urandom	Outputs random bytes — used for generating secure data.
+Device mapper	Virtual layer for managing logical storage on physical disks.
+dm-multipath	Redundant storage links for fault tolerance.
+/etc/multipath.conf	Config file for multipath settings.
+mdadm	Command-line RAID manager.
+RAID 5	Striping + parity; needs 3 disks; survives 1 failure.
+RAID 6	Like RAID 5 but with dual parity; survives 2 failures.
+RAID 10	Combines striping and mirroring; needs 4 disks minimum.
+/proc/mdstat	Kernel file showing current RAID status.
+LVM (Logical Volume Manager)	Creates/manage logical volumes from physical storage.
+pv* commands	Manage physical volumes (pvcreate, pvscan, pvremove, etc.).
+vg* commands	Manage volume groups (vgcreate, vgs, vgextend, vgremove, etc.).
+lv* commands	Manage logical volumes (lvcreate, lvs, lvextend, lvremove, etc.).
+mount	Attaches a file system to a mount point.
+mount options	auto, noauto, nouser, user, exec, noexec, ro, rw, sync, async.
+umount	Unmounts a file system.
+umount options	-f: force, -l: lazy, -R: recursive, -t: unmount specific types, -O: unmount with option.
+systemd.mount	File-based mount using systemd instead of fstab.
+FUSE (Filesystem in Userspace)	Allows mounting unusual or remote file systems via user space.
+mtab vs /proc/mounts	`/etc/mtab` is legacy; `/proc/mounts` is the accurate source of mount info.
+/proc/partitions	Shows major/minor numbers, blocks, and partition names.
+lsblk	List block devices.
+blkid	Display or print UUIDs and labels of block devices.
+fsck	File system consistency checker.
+e2fsck	Check/repair ext2/ext3/ext4 file systems.
+resize2fs	Resize ext file systems.
+tune2fs	Adjust ext file system parameters (journaling, mount count, etc.).
+dumpe2fs	Dump detailed info from ext superblocks.
+xfs_info	Show info about XFS file systems.
+xfs_admin	Modify XFS labels and UUIDs.
+xfs_metadump	Copy XFS metadata for analysis.
+xfs_growfs	Expand an XFS file system.
+xfs_copy	Copy XFS file systems.
+xfs_repair	Check and fix XFS file system errors.
+xfs_db	Debug tool for XFS file systems.
+lsscsi	Show connected SCSI devices.
+fcstat	Show statistics about optical drives.
+ulimit	Set limits on system resources like open files.
+df	Show available disk space.
+du	Show disk usage of files/directories.
+I/O scheduler	Determines how read/write requests are ordered.
+Deadline scheduler	Favors fast response time; good for servers.
+CFQ scheduler	Complete Fair Queuing; balances across tasks.
+NOOP scheduler	Minimal scheduler; best for SSDs.
+iostat	Display I/O statistics and CPU usage.
+ioping	Test I/O latency like ping.
+Storage quota	Restrict how much space users/groups can use.
+quotacheck	Create quota database.
+edquota	Edit quota for user/group.
+setquota	Set quota limits directly.
+fstab quota settings	Add usrquota and grpquota options to enable quotas.
+repquota	Show quota report.
+warnquota	Send quota warnings to users/groups.

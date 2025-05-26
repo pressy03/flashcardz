@@ -1,0 +1,47 @@
+Device drivers	Software components that enable the kernel to communicate with hardware devices.
+Thin client	A lightweight endpoint that relies on a server for processing and storage.
+USB storage	External storage devices recognized under /dev as block devices.
+GPIO (General Purpose Input/Output)	Pins on hardware used for digital signal input or output.
+SATA	A common interface for connecting storage drives in computers.
+SCSI	An interface standard for connecting peripheral devices like disks and printers.
+SAS	A faster variant of SCSI for enterprise storage.
+HBA (Host Bus Adapter)	Hardware interface for connecting to storage networks.
+PCI	Peripheral Component Interconnect bus for attaching hardware devices to the motherboard.
+/proc/devices	A file listing major device numbers for registered character and block devices.
+/sys	A virtual filesystem that provides a hierarchical view of device and driver information.
+/dev	Directory containing device nodes that represent hardware and virtual devices.
+/dev/mapper	Directory for device-mapper nodes, including LVM and encrypted volumes.
+/etc/x11	Configurations for the X11 graphical server.
+/usr/lib/udev/rules.d	Default udev rules provided by the system.
+/etc/udev/rules.d	Local udev rules for custom device handling.
+/dev/bus/usb	Directory representing connected USB devices.
+/dev/ttyS#	Serial port device nodes for console redirection.
+/etc/cups/cupsd.conf	Main configuration file for the CUPS printing system.
+/etc/cups/cups-files.conf	Configuration file controlling file locations and permissions for CUPS.
+lpr	Command to submit print jobs to CUPS or other print daemons.
+lpq	Display the current print queue.
+lprm	Remove jobs from the print queue.
+udevadm	A tool to control and monitor udev; used to reload rules and trigger events.
+lsdev	Lists devices as seen by the kernel.
+/proc/interrupts	Shows interrupt requests assigned to each CPU core.
+/proc/ioports	Lists I/O port ranges used by hardware devices.
+/proc/dma	Shows DMA channels in use and their assignments.
+lsusb	Displays information about USB buses and connected devices.
+lspci	Lists PCI devices on the system bus.
+lsblk	Shows block devices and their mount points.
+dmesg	Displays kernel messages, including device initialization logs.
+ping	Test network connectivity to devices like networked printers.
+free	Reports memory usage statistics.
+top	Interactive process viewer showing CPU and memory use.
+system logs	Log files that record kernel and device events.
+ecc errors	Error-correcting code faults reported by memory modules.
+mdadm	Manages software RAID arrays and monitors their status.
+lshw	Lists detailed hardware configuration information.
+dmidecode	Dumps system hardware information from the DMI table.
+ABRT (Automatic Bug Reporting Tool)	A service on some distros for reporting system crashes.
+Keyboard mapping issues	Problems arising from incorrect keyboard layout settings.
+Communication port issues	Errors in serial or network port configurations.
+Printer issues	Troubleshoot connectivity and driver support for printers.
+Memory issues	Identify and resolve system memory shortages or faults.
+Video issues	Troubleshoot display and GPU driver problems.
+Storage adapter issues	Diagnostics for HBA, SCSI, SATA, and RAID controller errors.

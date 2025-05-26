@@ -1,0 +1,51 @@
+localization	The process of adapting the system to a specific locale (language, region, formats).
+/usr/share/zoneinfo	Directory containing timezone data files.
+/etc/localtime	A symlink to the system’s chosen timezone file.
+/etc/timezone	File indicating the system’s timezone setting (Debian-based).
+date	Command that displays or formats the current date and time.
+timedatectl	Utility to query and change the system clock and timezone.
+/etc/adjtime	File logging hardware-clock drift adjustments.
+hwclock	Tool to query or set the hardware (RTC) clock.
+localectl	Utility to query and change the system’s locale and keyboard settings.
+VNC	A protocol for remote graphical desktop access.
+xrdp	An open-source RDP server for graphical remote access to Linux.
+NoMachine	A proprietary remote-desktop protocol and client for Linux.
+SPICE	A protocol for accessing virtual machine desktops with high performance.
+console redirection	Redirecting a system’s console I/O over a serial or network connection.
+SSH	A secure protocol for remote shell access and file transfers.
+systemctl	The primary tool for managing systemd services, targets, and units.
+hostnamectl	Utility to query or set the system hostname and related metadata.
+SysVinit	Traditional init system using runlevels and init scripts.
+/etc/init.d	Directory containing SysVinit service scripts.
+/etc/rc.local	Legacy script run at the end of multiuser boot (often disabled).
+runlevel	The current or previous SysVinit runlevel (system state).
+telinit	Tool to change SysVinit runlevels.
+/etc/inittab	Configuration file defining runlevels and init behavior (SysVinit).
+chkconfig	Utility to list or modify runlevel settings for SysVinit services.
+service	Legacy command to start, stop, or query SysVinit services.
+process states	The statuses a process can have (running, sleeping, stopped, zombie).
+Zombie	A process that has terminated but still has an entry in the process table.
+PID	A unique identifier for a running process.
+pgrep	Finds processes by name and returns their PIDs.
+pidof	Retrieves the PID(s) of a given command.
+/proc/cpuinfo	File showing detailed information about the CPU.
+/proc/meminfo	File showing detailed information about system memory.
+uptime	Shows how long the system has been running and load averages.
+lscpu	Displays CPU architecture information.
+free	Summarizes total, used, and free memory and swap.
+vmstat	Reports virtual memory statistics and system activity.
+lsmem	Displays information about system memory topology.
+systemd-analyze	Reports system boot-up performance analysis.
+lsof	Lists open files and the processes that opened them.
+nohup	Runs a command immune to hangups after logout.
+fg	Brings a background job into the foreground.
+bg	Continues a suspended job in the background.
+jobs	Lists active jobs in the current shell session.
+kill	Sends a signal to terminate a process by PID.
+pkill	Sends a signal to processes matching a name pattern.
+killall	Sends a signal to all processes matching a name.
+OOM killer	Kernel mechanism that terminates processes when out of memory.
+swap space	A designated area on disk used to extend virtual memory.
+mkswap	Configures a partition or file for use as swap space.
+swapon	Enables a swap partition or file for use.
+swapoff	Disables a swap partition or file.

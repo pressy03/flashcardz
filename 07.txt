@@ -1,0 +1,26 @@
+kernel space	The reserved memory area where the Linux kernel operates.
+user space	The area of memory where user applications run.
+Monolithic kernel	A kernel where all services and drivers are part of the kernel; fast but less secure.
+Micro kernel	A kernel that runs drivers in user space; slower but more stable and secure.
+uname	Prints system information like kernel version and architecture.
+Kernel Layers	The structure includes: System Call Interface, Process Manager, Memory Manager, File System Manager, VFS, Device Management.
+System Call Interface (SCI)	Interface that allows user space apps to request services from the kernel.
+Process Management	Handles creation, scheduling, and termination of processes.
+Memory Management	Manages RAM and swap; allocates memory to processes.
+File System Manager	Manages access and storage of files on disk.
+Virtual File System (VFS)	Abstract layer between user applications and actual file systems.
+Device Management	Manages device input/output and communication with hardware.
+/usr/lib/modules/	Directory containing kernel modules (add-ons for the kernel).
+lsmod	Displays currently loaded kernel modules.
+modinfo	Displays information about a specific kernel module.
+insmod	Manually inserts a kernel module.
+rmmod	Removes a kernel module from the running kernel.
+modprobe	Loads or unloads kernel modules intelligently based on dependencies.
+depmod	Regenerates the module dependency database.
+blacklist	Blocks specific kernel modules from being auto-loaded.
+install	Used in modprobe configs to define behavior of specific module installations.
+/proc/sys/	Virtual directory containing kernel runtime parameters.
+sysctl	Tool to view and modify kernel runtime parameters.
+/etc/sysctl.conf	Main configuration file for persistent kernel parameter changes.
+/proc/	Virtual filesystem that provides information about kernel processes.
+dmesg	Displays kernel messages, especially driver and hardware-related logs.

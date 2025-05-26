@@ -1,0 +1,20 @@
+Symbolic file permissions	Represented as rw-r--r--, meaning: user can read/write, group can read, others can read.
+Numeric file permissions	Represented as 644, where each digit reflects read/write/execute for user (6), group (4), others (4).
+ls -l output columns	File type & permissions, link count, owner, group, size, modified date, file name.
+Directory link count	2 + number of subdirectories — one for itself, one for parent, rest for children.
+chmod	Change file permissions using symbolic (u+rw) or numeric (chmod 644) syntax.
+chmod options	-c: report changes; -R: apply changes recursively.
+umask	Sets default permissions for new files/directories (e.g. umask 0002 → dirs = 775, files = 664).
+chown	Change file ownership: chown user:group file.txt.
+chgrp	Change group ownership of a file.
+SUID (Set User ID)	File runs with owner’s privileges (e.g., passwd lets users update their own passwords).
+SGID (Set Group ID)	File or dir runs with group’s privileges. On dirs, new files inherit group.
+Sticky bit	Prevents others from deleting files in a directory unless they are the owner or root.
+chmod special bits	u+s: set SUID; g+s: set SGID; +t: set sticky bit; chmod 4755 file: numeric SUID.
+Immutable attribute	File can’t be edited, renamed, or deleted — even by root.
+chattr	Modify file attributes like +i (immutable), +a (append only).
+lsattr	View attributes set with chattr.
+getfacl	View Access Control Lists (ACLs) — extended permissions beyond owner/group/others.
+setfacl	Modify ACLs using flags: -m: modify; -x: remove entry; -b: remove all; Example: setfacl -m u:john:rw file.
+lid -g	List all users in a group.
+getent	List users and groups in a sorted, system-resolved format.

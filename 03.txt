@@ -1,0 +1,36 @@
+UID	A unique identifier assigned to each user account in Linux.
+Account types in Linux	Root (admin), Standard user (normal login), and Service account (background processes, not loggable).
+Root login best practice	Do not log into root directly; use sudo or sudoedit for safety and auditability.
+sudoedit	Securely edit files as root without switching to the root shell.
+visudo	Edits and validates the /etc/sudoers file safely.
+visudo options	-c: check current sudoers file; -f: check custom sudoers file; -s: strict mode; -x: output as JSON.
+wheel group	A special user group that grants superuser (sudo) access on systems that disallow direct root login.
+polkit (PolicyKit)	Manages communication between unprivileged and privileged processes.
+su	Switch user (defaults to root); starts a new shell under the new user's ID.
+id	Shows current user's UID, GID, and group memberships.
+pkexec	Runs commands as another user using PolicyKit—similar to sudo.
+useradd	Adds a new user account; uses /etc/passwd, /etc/login.defs, and /etc/skel.
+useradd options	-c: comment; -e: account expiration date; -s: default shell; -D: show default settings.
+/etc/passwd	Stores user info: username:password:UID:GID:comment:home:shell.
+/etc/shadow	Stores password hashes and expiration settings—readable only by root.
+chage	Modify user password aging policies.
+usermod	Modify existing user account settings.
+userdel	Delete a user account.
+/etc/group	Stores group info: groupname:password:GID:user list.
+groupadd	Create a new group. Options: -g, -f, -o.
+groupmod	Modify group name or GID.
+groupdel	Delete a group.
+usermod -aG [group] [user]	Add user to a supplementary group.
+whoami	Print your current username.
+who	Show logged-in users, system uptime, and more.
+who -u	Show user idle time (. = active, old = >24h idle).
+who am i	Display info for your current session.
+w	Show who’s logged in and what they’re doing.
+last	Show user login history from /var/log/wtmp.
+id (again)	Shows UID, GID, and groups for current or specified user.
+.bashrc	User-specific shell settings—aliases, env vars, defaults.
+.bash_profile	Shell config for login sessions.
+/etc/skel/	Default template directory copied to new users' home directories.
+/etc/profile	System-wide settings applied at login.
+/etc/profile.d/	Stores shell scripts for setting system-wide env vars.
+/etc/bashrc	Global Bash configuration file.

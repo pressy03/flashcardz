@@ -1,0 +1,43 @@
+vi	A modal visual text editor in the terminal; uses keyboard shortcuts.
+vim	Improved version of vi with more features and plugins.
+Emacs	Powerful and extensible text editor used in development.
+gVim	Graphical version of Vim with mouse support.
+gedit	Simple GUI text editor in GNOME desktop environments.
+GNU nano	Beginner-friendly terminal-based text editor.
+vim insert modes	Insert (i), append (A), new lines (o, O), etc.
+vim visual and command modes	v for visual, : for execute mode, Esc for command.
+vim navigation	Move by char, line, or word; go to start/end.
+vim search/yank	Search text, yank (copy), or delete.
+nano shortcuts	Basic key bindings for copy, paste, and marking.
+locate	Fast file search using a prebuilt database.
+updatedb	Updates the locate database.
+find	Searches directories recursively by criteria.
+which	Shows full path of an installed command.
+whereis	Shows all locations (binary, man page, source) of a command.
+cat	Displays file content.
+head	Shows the first 10 lines of a file.
+tail	Shows the last 10 lines of a file.
+less and more	Paginate file viewing; used for long files.
+cp	Copy files or directories.
+mv	Move or rename files/directories.
+unlink	Delete files (not directories).
+ls	List directory contents.
+mkdir	Make a new directory.
+rmdir	Delete an empty directory.
+echo	Print arguments to stdout.
+printf	Enhanced echo with formatting control.
+tr	Translate or delete characters in text.
+wc	Count lines, words, and characters in text.
+sort	Sort lines of text files.
+cut	Extract fields or characters from lines.
+paste	Combine lines from multiple files side by side.
+diff	Compare files line-by-line.
+grep	Search for patterns in files.
+awk	Text processor that applies patterns to lines.
+sed	Stream editor for inline text changes.
+ln	Create hard or symbolic links.
+Hard link	Direct pointer to file's inode; remains if original is deleted.
+Symbolic link	Pointer to file path; breaks if original file is deleted.
+Redirection	Redirect input/output streams in shell.
+xargs	Passes input as arguments to commands.
+tee	Write output to both file and screen.

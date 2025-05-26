@@ -1,0 +1,18 @@
+Open-source Unix-based	An OS whose source code anyone can inspect, modify, and redistribute; built on Unix design principles.
+Community support	Free help from forums and user groups—valuable but sometimes inconsistent, especially for niche apps.
+CentOS	A free, community-supported rebuild of Red Hat Enterprise Linux, offering enterprise stability without licensing fees.
+Shell	A program that translates your keystrokes into kernel requests (e.g. Bash, Zsh).
+Bash (Bourne-Again SHell)	An enhanced Bourne shell (sh), featuring scripting improvements and the default on most Linux distros.
+TUI (Text-Based User Interface)	An interface that uses text characters for windows and controls (e.g. mc, htop).
+echo	Prints its arguments to the console.
+less keys	PgUp/PgDn to scroll, q to quit.
+nano	A simple console text editor (may not be installed by default).
+shutdown -h now	Halt the system immediately; -h means “halt” (no delay).
+shutdown -r now	Reboot the system immediately.
+su	Switch user credentials (to root by default).
+man-page formatting	Bold text – type exactly as shown; Italic text – replace with an argument; `-abc` – optional arguments; `-a|-b` – cannot be used together; Italic text in (parentheses) – multiple possible arguments.
+apropos	Search man pages by keyword.
+whatis	Show a one-line description of a command.
+info	Display Info documentation (an alternative to man pages).
+/usr/share/doc	Directory containing distribution and package documentation.
+TLDP	The Linux Documentation Project (https://tldp.org), a major online resource.

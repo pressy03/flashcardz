@@ -1,0 +1,22 @@
+boot loader	A program that loads the operating system into memory during startup.
+BIOS	Legacy firmware interface responsible for initial hardware initialization.
+UEFI	Modern firmware interface replacing BIOS; supports secure boot and large disks.
+MBR (Master Boot Record)	The traditional partition table and boot code located in the first sector of a storage device.
+GPT (GUID Partition Table)	A modern partition table standard for UEFI systems, supporting large disks and redundancy.
+PXE (Preboot Execution Environment)	A network-based boot protocol that allows a system to boot from a server.
+raw partition	An unformatted partition used for direct read/write access without a filesystem.
+initramfs	An initial RAM filesystem loaded by the bootloader to provide drivers and modules before mounting the real root filesystem.
+initrd	Legacy initial RAM disk archive loaded at boot to supply necessary drivers and tools.
+mkinitrd	A tool for building initramfs or initrd images with required kernel modules.
+dracut	A utility for generating initramfs images in modern Linux distributions.
+/boot	The directory that contains kernel images and bootloader configuration files.
+/boot/grub2	The directory for GRUB2 configuration files on BIOS-based systems.
+/boot/efi	The mount point for the EFI system partition containing UEFI bootloader files.
+vmlinuz-<kernel>	The compressed Linux kernel image file used during the boot process.
+GRUB2	An advanced bootloader supporting multiple platforms, custom scripting, and modular configuration.
+grub2-install	A command to install GRUB2 to a device or directory for system booting.
+grub.cfg	The generated GRUB2 configuration file defining the boot menu entries.
+/etc/grub.d	A directory of scripts used to build grub.cfg; users should not edit these directly.
+40_custom	A script in /etc/grub.d/ for adding custom menu entries to GRUB2.
+/usr/sbin/grub2-mkconfig	A command that generates or updates grub.cfg based on the scripts and settings.
+/usr/sbin/update-grub2	An alias for grub2-mkconfig to regenerate the existing GRUB2 configuration.

@@ -20,6 +20,7 @@
     body {
       margin: 0;
       display: flex;
+      flex-direction: row;
       height: 100vh;
       font-family: system-ui, sans-serif;
       background: var(--bg-color);
@@ -51,10 +52,11 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      padding: 20px;
     }
     #flashcard-container {
       perspective: 1000px;
-      width: 80%;
+      width: 100%;
       max-width: 800px;
     }
     #flashcard {
@@ -97,7 +99,7 @@
       -webkit-transform: rotateY(180deg);
     }
     #counter {
-      margin-top: 10px;
+      margin: 10px 0;
       font-size: 1rem;
     }
     #toggle-dark, #swap-td {
@@ -112,6 +114,42 @@
     }
     #toggle-dark { right: 10px; }
     #swap-td { right: 100px; }
+    #nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 15px;
+    }
+    #nav-buttons button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid var(--border-color);
+      background: var(--card-bg);
+      color: var(--text-color);
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+      }
+      #sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+      }
+      #main {
+        padding: 10px;
+      }
+      #flashcard {
+        padding: 30px;
+        font-size: 1.2rem;
+      }
+      #nav-buttons button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -129,6 +167,10 @@
       </div>
     </div>
     <div id="counter"></div>
+    <div id="nav-buttons">
+      <button onclick="prevCard()">← Prev</button>
+      <button onclick="nextCard()">Next →</button>
+    </div>
   </div>
 
  <script>
@@ -150,24 +192,14 @@
   });
 
   async function loadSets() {
-    // Hardcoded file list
     return [
-      '01-02.txt',
-      '03.txt',
-      '04.txt',
-      '05.txt',
-      '06.txt',
-      '07.txt',
-      '08.txt',
-      '09.txt',
-      '10.txt',
-      'Lirex.txt'
+      '01-02.txt','03.txt','04.txt','05.txt','06.txt','07.txt','08.txt','09.txt','10.txt','Lirex.txt'
     ];
   }
 
   function renderSets(list) {
     const container = document.getElementById('sets');
-    container.innerHTML = ''; // Clear existing
+    container.innerHTML = '';
     list.forEach(file => {
       const btn = document.createElement('button');
       btn.textContent = file.replace(/\.txt$/, '');
@@ -192,17 +224,28 @@
     const fc = document.getElementById('flashcard');
     document.querySelector('#flashcard .front').textContent = front;
     document.querySelector('#flashcard .back').textContent = back;
-    if (!animate) {
-      fc.style.transition = 'none';
-    } else {
-      fc.style.transition = '';
-    }
+    if (!animate) fc.style.transition = 'none';
+    else fc.style.transition = '';
     fc.classList.toggle('flipped', flipped);
     void fc.offsetWidth;
-    if (!animate) {
-      fc.style.transition = 'transform 0.6s';
-    }
+    if (!animate) fc.style.transition = 'transform 0.6s';
     document.getElementById('counter').textContent = `Card ${idx+1} of ${cards.length}`;
+  }
+
+  function nextCard() {
+    if (idx < cards.length - 1) {
+      idx++;
+      flipped = false;
+      showCard(false);
+    }
+  }
+
+  function prevCard() {
+    if (idx > 0) {
+      idx--;
+      flipped = false;
+      showCard(false);
+    }
   }
 
   document.getElementById('flashcard').addEventListener('click', () => {
@@ -216,13 +259,9 @@
       flipped = !flipped;
       showCard();
     } else if (e.key === 'ArrowRight') {
-      idx = (idx + 1) % cards.length;
-      flipped = false;
-      showCard(false);
+      nextCard();
     } else if (e.key === 'ArrowLeft') {
-      idx = (idx - 1 + cards.length) % cards.length;
-      flipped = false;
-      showCard(false);
+      prevCard();
     }
   });
 

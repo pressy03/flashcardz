@@ -1,0 +1,26 @@
+OSI Model	7-layer model of networking (Physical, Data Link, Network, Transport, Session, Presentation, Application)
+Firewall	Device or software that monitors and filters network traffic based on security rules
+SIEM (Security Information and Event Management)	System that collects, analyzes, and correlates security events/logs from various sources
+IDS (Intrusion Detection System)	Tool that monitors network or system activity for malicious behavior and alerts on detection
+IPS (Intrusion Prevention System)	Like an IDS but actively blocks malicious traffic in real time
+XSS (Cross-Site Scripting)	Web attack that injects malicious scripts into websites to target other users' browsers
+SQL Injection (SQLi)	Attack where malicious SQL code is inserted into input fields to manipulate a backend database
+Vulnerability Management	Process of identifying, evaluating, prioritizing, and remediating security weaknesses
+Active Directory (AD)	Microsoft service for managing users, permissions, and resources in a Windows domain
+PowerShell	Command-line shell and scripting language for Windows administration and automation
+MITRE ATT&CK	Framework of known adversary tactics, techniques, and procedures used for detection and defense
+False Positive (Security)	Benign activity incorrectly flagged as malicious by a security system
+Threat Intelligence	Information about threats used to improve detection, prevention, and response strategies
+Incident Response	Structured approach to identifying, containing, and recovering from security incidents
+Phishing	Social engineering attack to trick users into revealing sensitive information or credentials
+SOC (Security Operations Center)	Centralized team or facility that monitors, detects, and responds to cybersecurity threats
+Endpoint Detection and Response (EDR)	Security tools focused on detecting and responding to threats on end-user devices
+Port Scanning	Method to discover open ports and services on a network, often used in reconnaissance
+Zero-Day Vulnerability	Previously unknown vulnerability exploited before a fix is available
+Least Privilege	Access control principle where users get only the access necessary to perform their job
+Log Correlation	Analyzing multiple log sources to detect patterns indicating potential security incidents
+Splunk	Popular SIEM platform used to collect, search, and analyze security and event data
+Windows Event ID 4625	Windows log for failed login attempt (useful in brute-force detection)
+Windows Event ID 4688	Windows log indicating a new process was created (helps identify suspicious activity)
+Blue Team	Defensive security team focused on detection, response, and system hardening
+Red Team	Offensive security professionals who simulate attacks to test defenses

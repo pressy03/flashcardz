@@ -1,0 +1,83 @@
+OSI model	The seven-layer framework describing network functions from physical to application.
+Physical layer	Handles transmission of raw bits over a physical medium.
+Data link layer	Provides node-to-node data transfer and error detection (MAC addresses).
+Network layer	Manages packet routing and forwarding (IP addresses).
+Transport layer	Ensures end-to-end communication reliability (TCP/UDP).
+Session layer	Controls dialogues between applications.
+Presentation layer	Translates data formats and encryption.
+Application layer	Provides network services to end-user applications.
+TCP/IP suite	A simplified four-layer model for network communication.
+Node	A device on the network with a unique address.
+MAC address	A hardware identifier for a network interface.
+IP address	A logical identifier assigned to a device on a network.
+Hostname	A human-readable name mapped to an IP address.
+Router	A device that forwards packets between networks.
+Packet	A unit of data at the network layer.
+Frame	A packet encapsulated with a header/trailer at the data link layer.
+Bit	A single binary digit transmitted at the physical layer.
+DNS	Domain Name System; translates hostnames to IP addresses.
+DHCP	Dynamic Host Configuration Protocol; assigns IP configuration to clients.
+Reserved IP ranges	Private network address blocks (e.g., 10.0.0.0/8, 192.168.0.0/16).
+Loopback address	The IP address (127.0.0.1) used by a host to send traffic to itself.
+Link-local address	An address (169.254.x.x) assigned when DHCP is unavailable.
+NTP server	A host that provides time synchronization to clients.
+SSH server	A host that accepts secure shell connections.
+SMTP server	A host responsible for sending email.
+HTTP server	A host that serves web content over the web’s standard protocol.
+POP3 server	A host that provides email retrieval service.
+HTTPS server	A host that serves web content over a secure protocol.
+Certificate Authority	A trusted entity that issues digital certificates.
+SNMP server	A host that gathers and reports network management data.
+LDAP server	A host that provides directory-based authentication.
+Proxy server	A middleman for client requests to improve performance or filter content.
+Syslog server	A host that collects and stores system log messages from multiple sources.
+Load balancer	Distributes incoming traffic across multiple servers for scalability.
+File/print server	A host providing shared file storage or printing services.
+Samba service	Enables Windows-compatible file and printer sharing.
+NFS server	A host providing native Linux/Unix file sharing.
+VPN server	A host enabling secure remote network connections.
+Hostname configuration	Setting the system’s network identity name.
+Network Identity	The combination of IP address, hostname, and MAC address necessary for connectivity.
+NIC (Network Interface Card)	The hardware interface for network communications.
+nmcli	Command-line tool for managing network connections.
+nmtui	Text-based interface for network configuration.
+ifconfig	Legacy tool for displaying and configuring network interfaces.
+ip tool	Modern utility for network interface and routing configuration.
+iwconfig	Tool for configuring wireless network interfaces.
+DHCP DORA process	The sequence of Discover, Offer, Request, Acknowledge in DHCP.
+Hosts file	A local file (/etc/hosts) mapping hostnames to IP addresses.
+Resolver configuration	The file (/etc/resolv.conf) listing DNS servers for hostname resolution.
+Name service switch	File (/etc/nsswitch.conf) determining order of name resolution sources.
+dig	A utility to query DNS servers directly for records.
+nslookup	Interactive tool for querying DNS.
+host	A simple utility to perform DNS lookups.
+whois	Tool to query domain registration information.
+SaaS (Software as a Service)	Cloud model providing software applications over the internet.
+PaaS (Platform as a Service)	Cloud model providing platforms for application development.
+IaaS (Infrastructure as a Service)	Cloud model providing virtualized computing resources.
+Public cloud	Shared cloud infrastructure available to multiple organizations.
+Private cloud	Cloud infrastructure dedicated to a single organization.
+Hybrid cloud	A combination of public and private cloud models.
+Virtualization	The creation of virtual instances of hardware resources.
+Hypervisor	Type 1 runs on bare metal; Type 2 runs on a host OS.
+VM template	A preconfigured image used to deploy new virtual machines.
+Bootstrapping	Automated installation and configuration of new systems.
+Virtual storage	Virtual disk files that act as physical disk devices.
+NAT network	Technique for remapping IP addresses between private and public networks.
+Headless server	A system operating with no graphical interface.
+virsh	A shell interface for managing virtual machines.
+libvirt	A toolkit for interacting with virtualization capabilities.
+VMM (Virtual Machine Manager)	A GUI for managing libvirt-based virtual machines.
+Wireshark	A packet analyzer for network traffic inspection.
+ping	A tool to test reachability of network devices.
+netstat	Reports network connections and statistics.
+ss	A modern utility for listing socket information.
+traceroute	Shows the path packets take to a destination.
+nmap	Scans for open ports and services on network hosts.
+tcpdump	Captures and displays network packet headers.
+netcat	A versatile networking tool for reading/writing data across networks.
+iftop	Displays bandwidth usage per connection in real time.
+iperf	Measures maximum network throughput between hosts.
+mtr	Combines ping and traceroute for network diagnostics.
+arp	Displays and manipulates the system ARP table.
+routing loop	A network condition where packets circulate repeatedly between routers.

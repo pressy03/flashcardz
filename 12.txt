@@ -1,0 +1,32 @@
+Package manager	A program that installs, updates, and removes software packages.
+DPKG	The low-level package manager for Debian-based distributions handling .deb files.
+RPM	The low-level package manager for RPM-based distributions handling .rpm files.
+YUM	Legacy front-end for RPM that resolves dependencies automatically.
+DNF	The modern, lightweight front-end for RPM-based systems (successor to YUM).
+Zypper	The command-line package manager for openSUSE.
+APT	A higher-level interface for DPKG that manages dependencies and repositories.
+Local repository	A package store located on local storage for offline or internal use.
+Centralized repository	A shared repository on an internal network used by multiple systems.
+Vendor repository	A repository maintained by a distribution vendor, typically online.
+createrepo	A utility to generate metadata for an RPM-based repository.
+.sources.list	The file (/etc/apt/sources.list) listing APT repositories on Debian-based systems.
+APK equivalent	Package manager term in Alpine Linux (not used here, but analogous).
+YUM repository configuration	Stored under /etc/yum.repos.d/ for RPM-based systems.
+DNF configuration	Stored under /etc/dnf/dnf.conf for RPM-based systems.
+APT configuration	Stored under /etc/apt/ for Debian-based systems.
+wget	A command-line tool to download files over HTTP, HTTPS, and FTP.
+curl	A versatile command-line tool for transferring data over many protocols.
+tar	A utility to archive multiple files into a single archive (tarball).
+gzip	A compression tool that produces .gz files, often used with tar.
+bzip2	A compression tool that produces .bz2 files, often used with tar.
+zip	A compression tool that produces .zip files.
+xz	A compression tool that produces .xz files, often used with tar.
+GCC	The GNU Compiler Collection for compiling source code into binaries.
+makefile	A file containing instructions for automating the compilation process.
+ldd	A utility that lists shared library dependencies for a binary.
+configure script	A script that checks the environment and prepares the source tree for compilation.
+make	A build automation tool that compiles source code based on instructions in a makefile.
+make install	The makefile target that installs compiled binaries onto the system.
+Broken dependency	A situation where required packages or libraries for a program are missing or incompatible.
+rpm -V equivalent	Description of how to verify package integrity in RPM-based systems (semantic concept).
+apt-cache depends equivalent	Description of how to view package dependencies in Debian-based systems (semantic concept).

@@ -1,0 +1,177 @@
+Confidentiality	Ensuring that data is accessible only to authorized individuals, often via encryption and access controls.
+Integrity	Ensuring that data remains accurate and unaltered, often via hashing, digital signatures, and change control.
+Availability	Ensuring that systems and data are accessible when needed, achieved through redundancy and fault tolerance.
+Authentication	The process of verifying a user’s identity (e.g., via passwords, tokens, or biometrics).
+Token	An object used for access control that can expire after a defined period.
+Biometrics	Authentication based on unique physical traits (e.g., fingerprints or facial recognition).
+RADIUS	A protocol for authentication, authorization, and accounting (AAA) in networked systems.
+TACACS+	A Cisco-proprietary AAA protocol offering more secure and scalable authentication.
+LDAP	A directory-access protocol used for centralized authentication and user management.
+Kerberos	A network authentication protocol using tickets to allow secure, single-sign-on access.
+kinit	A Kerberos command to obtain and cache a ticket-granting ticket.
+kpassword	A Kerberos command to change a user’s Kerberos password.
+klist	A Kerberos command to list the contents of the ticket cache.
+kdestroy	A Kerberos command to destroy all cached tickets.
+Privilege escalation	When a user gains unauthorized higher-level access (e.g., root privileges).
+chroot jail	A technique to isolate a process and its children by changing the root directory.
+Encryption	The process of encoding information to prevent unauthorized access.
+Full Disk Encryption (FDE)	Encrypting an entire storage partition to protect data at rest.
+LUKS (Linux Unified Key Setup)	A standard for Linux disk encryption.
+cryptsetup	A command-line tool for configuring and managing LUKS-encrypted devices.
+isLuks	A cryptsetup subcommand to verify if a device is LUKS-formatted.
+luksOpen	A cryptsetup subcommand to decrypt and open a LUKS device.
+luksClose	A cryptsetup subcommand to close a decrypted LUKS device.
+luksAddKey	A cryptsetup subcommand to add a new passphrase to a LUKS device.
+luksDelKey	A cryptsetup subcommand to remove a passphrase from a LUKS device.
+shred	A utility to securely overwrite a file or partition to make data recovery impossible.
+Hashing	A method to create a fixed-size digest from data to verify integrity.
+SSL/TLS	Protocols that provide encrypted communication and secure identity verification.
+mod_ssl	A module that enables SSL/TLS support in Apache HTTP Server.
+ssh root login removal	The practice of disabling direct root login over SSH for security.
+default port modification	Changing default network service ports (e.g., SSH or HTTP) to reduce attack vectors.
+bootloader password	Setting a password on the bootloader to prevent unauthorized boot-time changes.
+BIOS password	Setting a password in the BIOS/UEFI to restrict unauthorized firmware changes.
+lsmod search	Checking loaded kernel modules to identify potential malicious modules or unauthorized hardware.
+modprobe unload	The act of removing unneeded or malicious kernel modules to reduce attack surface.
+modprobe blacklist	Preventing specific kernel modules from automatically loading by adding them to a blacklist.
+user ID separation	A practice of assigning unique UIDs to avoid shared-identity vulnerabilities.
+public key infrastructure (PKI)	A system for managing public/private key pairs and digital certificates.
+cron access restriction	Limit which users can schedule cron jobs to prevent unauthorized automated tasks.
+Ctrl+Alt+Del disable	Disabling the key combination that reboots the system to prevent denial-of-service via reboot.
+auditd	A service that records security-related system events for auditing and monitoring.
+login banner	A message displayed before the login prompt to warn unauthorized users and meet compliance.
+partition separation	Separating OS and application data onto different partitions to minimize collateral damage during breach.
+disable unused services	Turning off or removing services that are not needed to reduce the attack surface.
+IAM (Identity and Access Management)	A framework for managing digital identities and controlling access to resources.
+~/.ssh/	A directory storing SSH-related files, including keys and known hosts.
+id_rsa	A user’s private SSH key used for secure authentication.
+id_rsa.pub	A user’s public SSH key to be shared with remote hosts for authentication.
+authorized_keys	A file listing public keys that are authorized to log in to an account.
+known_hosts	A file containing host public keys that a client has connected to previously.
+config (SSH)	A file for configuring SSH client options and connection settings.
+ssh-keygen	A tool to generate a new public/private key pair for SSH authentication.
+ssh-copy-id	A tool to install a public key on a remote server for SSH key-based authentication.
+ssh-add	A utility to add a private key to the SSH authentication agent for single sign-on.
+sshd_config	The SSH server configuration file where authentication methods are enabled or disabled.
+PasswordAuthentication	A setting in sshd_config that enables password-based SSH login when set to “yes.”
+PubkeyAuthentication	A setting in sshd_config that enables public key-based SSH login when set to “yes.”
+PermitRootLogin	A setting in sshd_config that controls whether root can directly log in via SSH.
+allowusers	A setting in sshd_config that restricts SSH login to specified users.
+denyusers	A setting in sshd_config that denies SSH login for specified users.
+/PAM (Pluggable Authentication Modules)	A framework for integrating multiple authentication mechanisms on Linux.
+pam_cracklib	A PAM module to enforce password complexity and retry limits.
+pam_tally2	A PAM module to lock accounts after repeated failed login attempts.
+pam_faillock	A newer PAM module to lock user accounts after failed authentication.
+pam_ldap	A PAM module that integrates LDAP-based user authentication.
+Digital signature	A cryptographic mechanism to verify the authenticity and integrity of data.
+Digital certificate	A document that binds a public key to an entity’s identity, signed by a CA.
+Certificate Authority (CA)	A trusted organization that issues digital certificates.
+Certificate Signing Request (CSR)	A message sent to a CA to apply for a digital certificate.
+OpenSSL	An open-source toolkit for SSL/TLS and general-purpose cryptographic functions.
+IPSec	A suite of protocols for securing Internet Protocol communications via tunneling and encryption.
+StrongSwan	A software implementation of IPSec for Linux, enabling VPN connections.
+ipsec.conf	The main configuration file for StrongSwan’s IKE and IPSec connections.
+ipsec.secrets	The StrongSwan file storing preshared keys or certificates for authentication.
+OpenVPN	A widely used VPN solution based on SSL/TLS.
+ipsec/performance modes	Transport mode encrypts only payload, while tunnel mode encrypts the entire IP packet.
+DTLS	A variant of TLS that works over UDP for low-latency secure communications.
+/AppArmor	A Linux security module that confines programs to defined file and resource paths.
+SeLinux	A Linux security module implementing mandatory access control via contexts.
+DAC (Discretionary Access Control)	The default Linux permission model where file owners control access.
+MAC (Mandatory Access Control)	A security model where access policies are enforced by the kernel, not by file owners.
+RBAC (Role-Based Access Control)	A method of restricting system access based on user roles.
+SeLinux mode	Can be disabled, permissive, or enforcing; controls how policies are applied.
+SeLinux policy	A set of rules defining what actions subjects (e.g., processes) can perform on objects (e.g., files).
+semanage	A tool to view and modify SeLinux policy settings.
+sestatus	A command to display the current SeLinux mode and policy status.
+getenforce	A command to show the current SeLinux mode (enforcing or permissive).
+setenforce	A command to change SeLinux enforcement mode at runtime.
+getsebool	A command to view the boolean variables controlling SeLinux policy behavior.
+setsebool	A command to toggle SeLinux boolean variables to enable or disable features.
+ls -Z	A variation of the ls command that shows SeLinux security context alongside file info.
+ps -Z	A variation of the ps command that shows SeLinux security context for running processes.
+chcon	A command to manually change the SeLinux context of a file or directory.
+restorecon	A command to restore default SeLinux contexts based on policy.
+audit2allow	A tool to generate custom SeLinux policy modules from audit logs.
+sealert	A tool to analyze SeLinux denials and suggest policy changes.
+apparmor_status	A command to display the current status of AppArmor and enforced profiles.
+aa-complain	A command to put an AppArmor profile into complain (log-only) mode.
+aa-enforce	A command to put an AppArmor profile into enforce mode, blocking disallowed actions.
+aa-disable	A command to disable a specific AppArmor profile entirely.
+aa-unconfined	A command to list processes running without an AppArmor confinement profile.
+Tunables (AppArmor)	Files under /etc/apparmor.d/tunables/ that set variables used in multiple profiles.
+Packet filtering firewall	A firewall that filters network packets based on predefined rules.
+Stateful firewall	A firewall that tracks the state of network connections to make filtering decisions.
+Application firewall	A firewall that inspects application-layer data for more granular control.
+iptables	A command-line utility to configure the Linux kernel’s Netfilter tables.
+filter table	The default iptables table used for packet filtering.
+nat table	An iptables table used for Network Address Translation rules.
+mangle table	An iptables table used to alter packet headers for advanced routing or QoS.
+raw table	An iptables table used to configure connection tracking exemptions.
+security table	An iptables table used by SeLinux to enforce security contexts.
+iptables-services	A package that preserves iptables rules across reboots on RPM-based systems.
+iptables-persistent	A package that preserves iptables rules across reboots on Debian-based systems.
+chain	A sequence of iptables rules applied to packets matching a specific hook (INPUT, OUTPUT, FORWARD).
+rule	A single condition-action pair in iptables defining how to handle matching packets.
+UFW (Uncomplicated Firewall)	A user-friendly front-end for managing a basic packet-filtering firewall.
+UFW allow	Enables incoming traffic on a specified port or service in UFW.
+UFW logging	Controls whether UFW logs allowed and denied packets.
+UFW enable	Activates the UFW firewall with configured rules.
+firewalld	A dynamic firewall daemon that manages zones and services without restarting.
+zone	A named set of firewall rules in firewalld, applied to network interfaces.
+drop zone	A firewalld zone that automatically drops all incoming connections by default.
+firewall-cmd	A command to configure and query firewalld runtime and permanent rules.
+get-zones	A firewalld query to list all available firewall zones.
+zone details	A firewalld query to show services and ports allowed in a specific zone.
+add service to zone	A firewalld operation to allow traffic for a named service in a zone.
+add port to zone	A firewalld operation to allow traffic on a specific port in a zone.
+remove port from zone	A firewalld operation to revoke port access from a zone.
+reload	f
+A firewalld operation to apply recent configuration changes to active rules.
+permanent rule	A firewalld rule saved to disk so it persists after reboots.
+Netfilter	A kernel framework for inspecting, filtering, and modifying network packets.
+nftables	The modern replacement for iptables, using a simplified syntax and improved performance.
+ip forwarding	A kernel feature that allows a Linux host to route packets between interfaces.
+ipset	A companion tool for iptables allowing efficient matching of large IP sets.
+IPS (Intrusion Prevention System)	A system that monitors network or system activity for malicious behavior and blocks it.
+DenyHosts	A tool that monitors SSH login attempts and blocks IPs that exhibit brute-force behavior.
+BLOCK_SERVICE	A DenyHosts setting specifying which services to protect from unauthorized access.
+DENY_THRESHOLD_VALID	A DenyHosts threshold for invalid login attempts triggering a block.
+Fail2ban	A tool that scans system logs for failed login attempts and blocks offending IPs temporarily.
+jail.conf	The main configuration file for Fail2ban, defining filters and actions.
+jail.local	A local override file for Fail2ban configuration used to customize settings.
+maxretry	A Fail2ban setting that defines the number of failed attempts allowed before banning.
+bantime	A Fail2ban setting that defines how long a host remains banned.
+ignoreip	A Fail2ban setting listing IPs that should never be banned.
+IANA (Internet Assigned Numbers Authority)	The global authority responsible for assigning network port numbers and protocol parameters.
+/var/log	The default directory where system and application logs are stored on Linux.
+/var/log/syslog	A log file containing all system events on Debian-based systems.
+/var/log/auth.log	A log file specifically containing authentication and authorization messages.
+/var/log/kern.log	A log file containing kernel messages and events.
+/var/log/messages	A log file containing general system messages on Red Hat–based systems.
+/var/log/secure	A log file containing authentication and security-related messages on Red Hat–based systems.
+logrotate	A utility that rotates, compresses, and manages log files automatically.
+logrotate.d	A directory containing individual log rotation configurations for different services.
+syslog-ng	A superset of the traditional syslog daemon with advanced filtering and routing capabilities.
+journalctl	A tool to query and display logs from the systemd journal.
+journald	The systemd component responsible for collecting and storing log messages in a binary journal.
+journald.conf	The configuration file for the systemd journal’s behavior and storage settings.
+last	A command that shows the login history of all users from the journal’s log of /var/log/wtmp.
+lastlog	A command that displays the most recent login of each user on the system.
+backup plan	A documented strategy for how and when to back up data to ensure recoverability.
+full backup	A backup that copies all selected data every time it runs.
+differential backup	A backup that copies only the data changed since the last full backup.
+incremental backup	A backup that copies only the data changed since the last incremental or full backup.
+snapshot	A point-in-time copy of a file system or storage volume.
+image-based backup	A backup that captures an entire disk or partition as an image file.
+cloning	A 1:1 copy of an entire storage device to another device.
+tar	A tool for creating and extracting archive files (tarballs).
+dar	(Disk ARchive)	A backup tool similar to tar that supports differential and incremental backups.
+cpio	A tool for copying files into and out of archive formats.
+dd	A low-level utility that copies and converts raw data from one location to another.
+mirrorvg	A command to create a mirrored copy of an LVM volume group.
+mklvcopy	A command to create a mirrored copy of a logical volume in LVM.
+lvcreate	A command to create new logical volumes in LVM.
+scp	A command for secure file transfer over SSH.
+SFTP	An interactive file transfer protocol over SSH.
+rsync	A versatile tool for efficiently synchronizing files between local and remote systems.

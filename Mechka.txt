@@ -1,0 +1,38 @@
+What command is used to schedule a one-time task?	at
+Which command lists all one-time scheduled tasks?	atq
+Which command removes a one-time scheduled task?	atrm
+Which command schedules a job when system load is low?	batch
+Which systemd unit type schedules periodic tasks?	timer
+How often does cron check its tasks by default?	every minute
+How does anacron differ from cron?	It assumes the system may be offline and runs missed tasks when possible.
+Where do you place systemd unit files for custom units?	/etc/systemd/system
+Which command simulates a log message?	logger
+Which command formats files for printing?	pr
+Which command shows available printers?	lpstat
+Which command deletes a printer configuration?	lpadmin
+Which commands send files to CUPS for printing?	lp, lpr
+Which command ensures a process continues after logout?	nohup
+Which command updates the shared library cache?	ldconfig
+Which command allows real-time filesystem debugging?	debugfs
+Which command tunes existing ext filesystems?	tune2fs
+Which command displays PCI device information?	lspci
+How do you check the current runlevel?	runlevel
+What do static linked executables include?	They include all mandatory libraries within themselves.
+How do you inspect the contents of a .deb archive?	ar
+What is a checksum?	A hash.
+Which command verifies package checksums on Debian-based systems?	debsums
+Which command checks TCP socket state?	ss
+Which commands retrieve DNS information?	dig, host
+Which command traces the network route to a host?	traceroute
+Which tool provides a simplified alternative to traceroute?	tracepath
+What does TTL represent in network packets?	The number of hops before timeout.
+What does MTU stand for?	Maximum Transmission Unit
+Which SSH key algorithms are supported?	ed25519, rsa, ecdsa, dsa
+Which protocols does CUPS support?	IPP, TCP, LPT
+What is udev responsible for?	hotplug event handling.
+Which iptables chains handle incoming and outgoing packets?	INPUT, OUTPUT
+SLAAC is the DHCP equivalent for which IP version?	IPv6
+Which SMTP command specifies the recipient?	RCPT
+Which email retrieval protocol requires persistent TCP connections and higher resources?	IMAP4
+In dhcp.conf, which directive specifies the network gateway?	subnet
+What does LAMP stand for?	Linux, Apache, MySQL, PHP

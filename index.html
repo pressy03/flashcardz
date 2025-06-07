@@ -120,7 +120,8 @@
     }
 
     #toggle-dark,
-    #swap-td {
+    #swap-td,
+    #shuffle {
       position: absolute;
       top: 10px;
       padding: 6px 10px;
@@ -137,6 +138,10 @@
 
     #swap-td {
       right: 100px;
+    }
+
+    #shuffle {
+      right: 190px;
     }
 
     #nav-buttons {
@@ -192,6 +197,7 @@
   <div id="main">
     <button id="toggle-dark">🌙</button>
     <button id="swap-td">Swap T/D</button>
+    <button id="shuffle">🔀 Shuffle</button>
     <div id="flashcard-container">
       <div id="flashcard">
         <div class="face front">Loading...</div>
@@ -223,9 +229,23 @@
       showCard(false);
     });
 
+    document.getElementById('shuffle').addEventListener('click', () => {
+      shuffle(cards);
+      idx = 0;
+      flipped = false;
+      showCard(false);
+    });
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
     async function loadSets() {
       return [
-        '01-02.txt', '03.txt', '04.txt', '05.txt', '06.txt', '07.txt', '08.txt', '09.txt', '10.txt', '11.txt', '12.txt', '13.txt'
+        '01-02.txt', '03.txt', '04.txt', '05.txt', '06.txt', '07.txt', '08.txt', '09.txt', '10.txt', '11.txt', '12.txt', '13.txt','Mechka.txt'
       ];
     }
 
@@ -242,13 +262,12 @@
     }
 
     async function loadFile(file) {
-      const res = await fetch(file + '?v=' + Date.now()); // forces fresh fetch
+      const res = await fetch(file + '?v=' + Date.now());
       const text = await res.text();
       cards = text.trim().split(/\r?\n/).map(line => line.split('\t'));
       idx = 0; flipped = false;
       showCard(false);
     }
-
 
     function showCard(animate = true) {
       const cardData = cards[idx] || ['', ''];

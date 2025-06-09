@@ -1,0 +1,38 @@
+at	Schedules a one-time task.
+atq	Lists all scheduled one-time tasks.
+atrm	Removes a scheduled one-time task.
+batch	Schedules a job to run when system load is low.
+cron	Schedules recurring tasks based on time criteria.
+crontab	Edits the table of cron entries for recurring jobs.
+crontab format	Defines job schedule with fields: minute hour day month weekday command.
+cron directories	System cron jobs are placed in /etc/cron.d, /etc/cron.hourly, /etc/cron.daily, /etc/cron.weekly, /etc/cron.monthly.
+git config	Sets repository or user configuration values.
+git init	Initializes a new Git repository.
+git clone	Copies an existing repository into a new directory.
+git add	Stages changes for the next commit.
+git commit	Records staged changes in the repository history.
+git status	Displays the current state of the working directory and staging area.
+git branch	Lists, creates, or deletes branches in a repository.
+git pull	Retrieves remote changes and merges them into the current branch.
+git push	Uploads local commits to a remote repository.
+git log	Shows the commit history for a repository.
+git checkout	Switches to a different branch or commit.
+git tag	Marks specific commits with human-readable names.
+git rebase	Applies commits on top of another base tip.
+git merge	Combines branches into a single history.
+.gitignore	Lists files and directories for Git to ignore.
+automation	Automates individual tasks without human intervention.
+orchestration	Coordinates and manages multiple automated tasks and services.
+Chef	Configuration management and orchestration tool using cookbooks.
+Puppet	Master-agent orchestration system for system configuration.
+Ansible	Agentless orchestration tool using YAML playbooks.
+Docker	Container platform for packaging and running applications.
+Kubernetes	System for automating deployment, scaling, and management of containers.
+OpenStack	IaaS cloud platform for managing large pools of compute, storage, and networking resources.
+containerization	Packages applications and dependencies into isolated containers.
+container operations	Manages containers with tools like Docker or Podman.
+sandboxing	Isolates applications using Snap, Flatpak, or AppImage.
+infrastructure as code	Defines and provisions infrastructure using code with tools like Terraform or SaltStack.
+CI (Continuous Integration)	Automatically builds and tests code changes on commit.
+CD (Continuous Deployment)	Automatically deploys code changes to production after passing tests.
+pipeline	A sequence of automated steps from code commit to production deployment.

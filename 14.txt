@@ -23,7 +23,7 @@ Fi	End keyword indicating the end of an if statement block.
 For loop	A control structure that iterates over a list of values, executing the loop body for each one.
 While loop	A control structure that repeats execution as long as a test expression remains true.
 Until loop	A control structure that repeats execution until a test expression becomes true.
-Read prompts the user for input during script execution and stores it in a variable.
+Read    prompts the user for input during script execution and stores it in a variable.
 Heritage of file contents	Ingesting the contents of a file into a variable with syntax like File=$(<filename).
 Redirection of output	Sending script output into a file using > or >> for overwriting or appending.
 Piping	Redirecting the output of one command into another command for processing.

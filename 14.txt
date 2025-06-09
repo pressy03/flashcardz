@@ -1,0 +1,29 @@
+Shebang	First line of a script (e.g., #!/bin/bash) that tells the system which interpreter to use.
+Variable	A named placeholder for data in a script, used like any programming language variable.
+Environment variable	A variable provided by the shell to all child processes (e.g., HOME, PATH, USER).
+export	Marks a shell variable to be passed to child processes as an environment variable.
+env	Displays the current environment variables for the shell session.
+set	Shows all shell variables and functions available in the current shell.
+alias	Creates a shortcut for a longer command or series of commands.
+time	Reports the duration a command takes to execute.
+Array	A data structure holding a list of values, accessed by index (e.g., myArray=("one" "two")).
+Arithmetic expansion	Calculates an arithmetic expression within the shell (e.g., $((var1 + var2))).
+String parsing	Manipulating strings using shell constructs (e.g., ${string:2:4} to extract a substring).
+Standard streams	The three default data streams in Unix: stdin (0), stdout (1), and stderr (2).
+Function	A block of reusable code defined with a name, invoked by that name to perform tasks.
+Comment	Text in a script (prefixed by #) ignored by the interpreter, used for documentation.
+Exit code	A numeric value returned by a command or script where 0 indicates success and nonzero indicates an error.
+Command substitution	Embedding the output of a command into a variable or another command (e.g., $(pwd)).
+If statement	The conditional construct that executes code only if a test expression evaluates to true.
+Comparison operators	Operators that compare values (e.g., =, !=, <, >, -eq, -gt) within test constructs.
+Logical AND and OR	Combining multiple test expressions so that all (AND) or any (OR) must be true.
+Elif clause	Provides an additional test if the initial if condition fails.
+Else clause	Executes code when none of the preceding conditional tests are true.
+Fi	End keyword indicating the end of an if statement block.
+For loop	A control structure that iterates over a list of values, executing the loop body for each one.
+While loop	A control structure that repeats execution as long as a test expression remains true.
+Until loop	A control structure that repeats execution until a test expression becomes true.
+Read prompts the user for input during script execution and stores it in a variable.
+Heritage of file contents	Ingesting the contents of a file into a variable with syntax like File=$(<filename).
+Redirection of output	Sending script output into a file using > or >> for overwriting or appending.
+Piping	Redirecting the output of one command into another command for processing.

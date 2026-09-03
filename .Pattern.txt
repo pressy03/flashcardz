@@ -1,0 +1,15 @@
+I'm using flashcards to learn them but I need you to reformat me the text like this
+
+
+
+Term Definition
+
+Term Definition
+
+...
+
+
+
+I'm using [Tab] between term and definition. It all needs to be saved into txt (I'll do that manually) 
+
+If the symbols are represented in Latex please translate them to real symbols

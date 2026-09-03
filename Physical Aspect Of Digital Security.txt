@@ -1,17 +1,17 @@
-X, Y	Uppercase letters represent the name of the random experiment or random variable[cite: 1].
-x, y	Lowercase letters represent a specific outcome of an experiment[cite: 1].
-p_x or P(x)	The probability that experiment X results in outcome x, also written as Pr[X=x][cite: 1].
-S, P, Q	Variables representing a complete probability distribution or Probability Mass Function (pmf)[cite: 1].
-Σ (Sigma)	A summation loop that adds up a series of values[cite: 1].
-Π (Pi)	A product loop that multiplies a series of values together[cite: 1].
-E_X	Expectation value, meaning the mathematical "average" of a function prior to the experiment[cite: 1].
-p_xy	Joint probability: The chance of outcome x AND outcome y both happening combined[cite: 1].
-p_y|x	Conditional probability: The chance of outcome y happening, given that x already happened[cite: 1].
-H(X)	Shannon entropy: The overall unpredictability of experiment X[cite: 1].
-h(p)	Binary entropy function: A shortcut entropy formula for experiments with exactly two outcomes[cite: 1].
-D(P||Q)	Relative entropy: The asymmetrical "penalty fee" when you assume distribution Q, but the truth is P[cite: 1].
-Δ(P,Q)	Statistical distance: A measure of the distance between two distributions[cite: 1].
-H(Y|X)	Conditional entropy: The average remaining unpredictability in Y after X is completely known[cite: 1].
-N	The total number of independent experiments performed[cite: 1].
-t	A "typical sequence" where outcomes happen exactly as often as their probabilities dictate[cite: 1].
-n_i	The exact number of times a specific outcome i occurs during those N experiments[cite: 1].
+X, Y	Uppercase letters represent the name of the random experiment or random variable.
+x, y	Lowercase letters represent a specific outcome of an experiment.
+p_x or P(x)	The probability that experiment X results in outcome x, also written as Pr[X=x].
+S, P, Q	Variables representing a complete probability distribution or Probability Mass Function (pmf).
+Σ (Sigma)	A summation loop that adds up a series of values.
+Π (Pi)	A product loop that multiplies a series of values together.
+E_X	Expectation value, meaning the mathematical "average" of a function prior to the experiment.
+p_xy	Joint probability: The chance of outcome x AND outcome y both happening combined.
+p_y|x	Conditional probability: The chance of outcome y happening, given that x already happened.
+H(X)	Shannon entropy: The overall unpredictability of experiment X.
+h(p)	Binary entropy function: A shortcut entropy formula for experiments with exactly two outcomes.
+D(P||Q)	Relative entropy: The asymmetrical "penalty fee" when you assume distribution Q, but the truth is P.
+Δ(P,Q)	Statistical distance: A measure of the distance between two distributions.
+H(Y|X)	Conditional entropy: The average remaining unpredictability in Y after X is completely known.
+N	The total number of independent experiments performed.
+t	A "typical sequence" where outcomes happen exactly as often as their probabilities dictate.
+n_i	The exact number of times a specific outcome i occurs during those N experiments.
